@@ -56,6 +56,8 @@ int stepper    = 0;
 int bt_status  = 0;        
 int bloodO2    = 0;
 int pulse      = 0;
+int warn_time  = 3000; // warning strings screen time in ms
+int piezo_time = 1000; // piezzo sound time in ms
 
 int gir_x      = 0;
 int git_y      = 0;
