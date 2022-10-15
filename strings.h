@@ -38,7 +38,7 @@ const char * const message_str[16] PROGMEM = {
  "By Strogg",
  "KirO°shi",
  "Opticals",
- "1990-2022",
+ "1990-2020",
  "Opti-Flash MK I.",
  "HUD Edition"
  };
