@@ -1,10 +1,10 @@
 const char * const message_str[16] PROGMEM = {
  "BT Disconnected",
  "BT Connected", 
- "New Call incoming",
- "New SMS Received",
- "New Mail Received",
- "Connecting",
+ "Incoming Call ",
+ "New SMS",
+ "Incoming Mail",
+ "Connect",
  "Notification",
  "Warning:Ice",
  "Warning:Humidity",
@@ -12,25 +12,33 @@ const char * const message_str[16] PROGMEM = {
  "Warning:Need eat?",
  "Warning:Need Water?",
  "Warning: Cold",
+ "Warning: Heat "
  "Usb connected",
  "Usb Disconnected",
- "Usb Read:",
+ "Usb Read:"
  };
 
 
- const char * const screen_str[14] PROGMEM = {
+ const char * const screen_str[21] PROGMEM = {
  "BToff",
  "BTon", 
  "Call:",
  "SMS",
  "Mail",
  "Batt:",
- "Usb"
+ "Usb",
  "BPM:",
- "O2:",
+ "Headache",
  "Temp:",
  "Hum:",
  "Alt:",
  "SOS?",
- "Debug"
+ "Debug",
+ "dancsok.zoltan@outlook.com",
+ "By Strogg",
+ "KirO°shi",
+ "Opticals",
+ "1990-2022",
+ "Opti-Flash MK I.",
+ "HUD Edition"
  };
