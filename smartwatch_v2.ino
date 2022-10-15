@@ -3,24 +3,27 @@ Smartwatch V2 by Zoltan "strogg" Dancsok dancosk.zoltan@outlook.com
 
 Hardware items
 - ssd1306 oled screen i2c
-- gí-91 multisensor module i2c
-- MAX30100-M blood oxygen and pulse meter i2c
+- gy-91 multisensor module i2c
+- heartbeat pulse sensor
 - tp battery charger.
 - piezzo 
+- vibro
 - usb slot
 
 Function list:
 - read temp,humidiy,altitude, accelometer, compass, pulse,bloodO2
-- select screens: - welcome screen
-                  - Default screen: battery lvl, shooting cross, mission time (sys uptime), bt status, compass circle, gyro cyrcle
-                  - Sensor screen: alt,temp,hum,gíro,etc... 
-                  - Health: bpm data, blood02 data, pulse animation
-                  - ALL  bt,mail,sms,call, status, sight, write o2, bpm anim, compass+gyro cycle
+- select screens: - welcome screen = boot screen 2 sec.
+                  - Default screen: uptime, bt status, compass circle, gyro cyrcle, watch (from BT), notifications
+                  - Sensor screen: alt,temp,hum,gyro,etc... 
+                  - Health: bpm data, pulse animation
+                  - ALL  bt,mail,sms,call, status, sight, write bpm anim, compass+gyro cycle
                   - Debug: write all sensor data
+                  - External mode serial mode: usb serial input data
 
 Eqv: 
 - temp 30°+accel >3  = water warning
-- temp > 32° = high temperature warn
+- temp > 30° = high temperature warn
+- temp > 35° = HEAT warn.
 - hum  >70%  = high hum. warn. 
 - hum <5 = cold warn.
 - hum < 0 = ice warn.
@@ -41,24 +44,26 @@ Eqv:
 
 SoftwareSerial usb_in(3,4);
 
+const int hbeat = 0; // A0 pulse pin
 int t_back     = A1;
 int t_next     = A2;
 int brain      = A3;
 int piezo      = 2;
 
-int modes      = 0;
+int modes      = 0; // screen modes
 int screens    = 0; // 0-4 
-int timer      = 0;
-int hours      = 0;
+int timer      = 0; // timer value
+int hours      = 0; 
 int minutes    = 0;
-int secs       = 0;
-int stepper    = 0;
-int bt_status  = 0;        
-int bloodO2    = 0;
-int pulse      = 0;
+int secs       = 0; 
+int stepper    = 0; // default main timer
+int bt_status  = 0;   // Bt connect status     
+int on_off     = 0; // on off status
+int pulse      = 0; // bpm data
 int warn_time  = 3000; // warning strings screen time in ms
 int piezo_time = 1000; // piezzo sound time in ms
-
+int headache   = 0;   // headache vibro mode status 0,1
+ 
 int gir_x      = 0;
 int git_y      = 0;
 int gir_z      = 0;
