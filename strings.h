@@ -12,7 +12,8 @@ const char * const message_str[16] PROGMEM = {
  "Warning:Need eat?",
  "Warning:Need Water?",
  "Warning: Cold",
- "Warning: Heat "
+ "Warning: Heat",
+ "Warning: High pulse"
  "Usb connected",
  "Usb Disconnected",
  "Usb Read:"
