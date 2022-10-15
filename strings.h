@@ -36,8 +36,8 @@ const char * const message_str[16] PROGMEM = {
  "Debug",
  "dancsok.zoltan@outlook.com",
  "By Strogg",
- "KirO°shi",
- "Opticals",
+ "KIRO°SHI",
+ "OPTICALS",
  "1990-2020",
  "Opti-Flash MK I.",
  "HUD Edition"
