@@ -1,5 +1,5 @@
 /*
-Smartwatch V2 by Zoltan "strogg" Dancsok dancosk.zoltan@outlook.com
+Smartwatch V2 by Zoltan "strogg" Dancsok dancsok.zoltan@outlook.com
 
 Hardware items
 - ssd1306 oled screen i2c
@@ -27,6 +27,9 @@ Eqv:
 - hum  >70%  = high hum. warn. 
 - hum <5 = cold warn.
 - hum < 0 = ice warn.
+- bpm > 100 = High pulse warn.
+- bpm > 120 = High pulse Danger! Call 112?
+- bpm < 50  = Low pulse Danger! Call 112?
 
 - Hour > 11 & <12 = eat warn.
 - Hour > 9 & <10  = eat warn.
