@@ -80,7 +80,9 @@ if(vin > 1 and !BTserial.available() and !Serial.available()){
         display.setTextSize(2);
         display.clearDisplay();
         display.setCursor(25,20); 
-        display.print(String(vin)+ " V");
+       // display.print(String(vin)+ " V");
+         display.print(vin);
+         display.print(" V");
         display.display();
         Serial.println(vin);
         BTserial.println(vin); 
