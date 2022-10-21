@@ -71,7 +71,7 @@ if(timer==3000){timer=0;}
 
 int chk = DHT.read11(DHT11_PIN);
 if(DHT.temperature > -50){temp = DHT.temperature;}
-if(DHT.humidity > -50){hum  = DHT.humidity;}
+if(DHT.humidity > -50){hum  = (DHT.humidity)*0.50;}  //correctional data for tp charger, beacuse output 4V
 
 vin = 0.0;
 value = analogRead(analogInput);
@@ -84,7 +84,7 @@ value = analogRead(analogInput);
 if(vin  < 1 and !BTserial.available() and !Serial.available() and screen == 2){ main_screen(); screen =1; } //auto back to main screen
 if (vin > 1 and !BTserial.available() and !Serial.available()){ 
   screen = 2;
-  vin = vin + 0.3;
+  vin = (vin + 0.3)*0.6; //correctional data for tp charger, beacuse output 4V
         display.setTextSize(2);
         display.clearDisplay();
         display.setCursor(25,20); 
